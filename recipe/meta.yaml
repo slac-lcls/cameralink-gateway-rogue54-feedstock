@@ -1,0 +1,42 @@
+{% set name = "cameralink-gateway" %}
+{% set version = "6.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url:  https://pswww.slac.stanford.edu/swdoc/tutorials/{{ name }}-{{ version }}.tar.gz
+  sha256: f5cd3a5585eee2ca8770eebd5685c2ef15f653f3ef960e76bb90df166f385fe9
+
+build:
+  skip: True  # [win or osx]
+  noarch: python
+  number: 3
+  script:
+    - "cd firmware/python && {{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pip
+  run:
+    - python
+
+about:
+  home: https://github.com/slaclab/cameralink-gateway
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: 'Cameralink-gateway software and firmware'
+  description: |
+    firmware for cameralink-gateway devices.
+  doc_url: https://github.com/slaclab/cameralink-gateway
+  dev_url: https://github.com/slaclab/cameralink-gateway
+
+extra:
+  recipe-maintainers:
+    - valmar
+    - chrisvam
+
