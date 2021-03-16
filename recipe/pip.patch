@@ -28,11 +28,11 @@ index 9ca94c3..0000000
 -    description = 'LCLS II cameralink package',
 -    packages = find_packages(),
 -)
-diff --git a/firmware/setup.py b/firmware/setup.py
+diff --git a/setup.py b/setup.py
 new file mode 100644
-index 0000000..e77e551
+index 0000000..9ebb7af
 --- /dev/null
-+++ b/firmware/setup.py
++++ b/setup.py
 @@ -0,0 +1,62 @@
 +from setuptools import setup
 +
@@ -86,13 +86,13 @@ index 0000000..e77e551
 +        'cameralink_gateway.ClinkFeb', 
 +    ],
 +    package_dir = {
-+        'cameralink_gateway': 'python/cameralink_gateway',
-+        'cameralink_gateway.surf': 'submodules/surf/python/surf',
-+        'cameralink_gateway.axipcie': 'submodules/axi-pcie-core/python/axipcie',
-+        'cameralink_gateway.LclsTimingCore': 'submodules/lcls-timing-core/python/LclsTimingCore',
-+        'cameralink_gateway.lcls2_pgp_fw_lib': 'submodules/lcls2-pgp-fw-lib/python/lcls2_pgp_fw_lib',
-+        'cameralink_gateway.ClinkFeb': 'submodules/clink-gateway-fw-lib/python/ClinkFeb',
-+        'cameralink_gateway.l2si_core': 'submodules/l2si-core/python/l2si_core',
++        'cameralink_gateway': 'firmware/python/cameralink_gateway',
++        'cameralink_gateway.surf': 'firmware/submodules/surf/python/surf',
++        'cameralink_gateway.axipcie': 'firmware/submodules/axi-pcie-core/python/axipcie',
++        'cameralink_gateway.LclsTimingCore': 'firmware/submodules/lcls-timing-core/python/LclsTimingCore',
++        'cameralink_gateway.lcls2_pgp_fw_lib': 'firmware/submodules/lcls2-pgp-fw-lib/python/lcls2_pgp_fw_lib',
++        'cameralink_gateway.ClinkFeb': 'firmware/submodules/clink-gateway-fw-lib/python/ClinkFeb',
++        'cameralink_gateway.l2si_core': 'firmware/submodules/l2si-core/python/l2si_core',
 +    }
 +)
 +
