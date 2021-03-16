@@ -8,13 +8,15 @@ package:
 source:
   url:  https://pswww.slac.stanford.edu/swdoc/tutorials/{{ name }}-{{ version }}.tar.gz
   sha256: f5cd3a5585eee2ca8770eebd5685c2ef15f653f3ef960e76bb90df166f385fe9
+  patches:
+    - pip.patch
 
 build:
   skip: True  # [win or osx]
   noarch: python
-  number: 4
+  number: 5
   script:
-    - "cd firmware/python && {{ PYTHON }} -m pip install . -vv"
+    - "cd firmware && {{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
