@@ -33,7 +33,7 @@ new file mode 100644
 index 0000000..9ebb7af
 --- /dev/null
 +++ b/setup.py
-@@ -0,0 +1,62 @@
+@@ -0,0 +1,63 @@
 +from setuptools import setup
 +
 +# use softlinks to make the various "board-support-package" submodules
@@ -45,6 +45,7 @@ index 0000000..9ebb7af
 +    name = 'cameralink_gateway',
 +    description = 'LCLS II cameralink package',
 +    packages = [
++        'cameralink_gateway',
 +        'cameralink_gateway.surf',
 +        'cameralink_gateway.surf.misc',
 +        'cameralink_gateway.surf.ethernet.mac',
